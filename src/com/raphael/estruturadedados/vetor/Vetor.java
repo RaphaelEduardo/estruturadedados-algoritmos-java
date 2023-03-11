@@ -16,7 +16,7 @@ public class Vetor {
 	}
 
 	// Adiciona um elemento no final do vetor
-	public Boolean adiciona(String elemento) {
+	public boolean adiciona(String elemento) {
 		if (this.tamanho < this.elementos.length) {
 			this.elementos[this.tamanho] = elemento;
 			this.tamanho++;
@@ -35,6 +35,21 @@ public class Vetor {
 		}
 	}	
 
+	/*
+	 *  Verificar se um elemento existe no vetor
+	 *  Se existir, retorna a posição que foi encontrado
+	 *  Se não, retorna -1 que é uma posição inexistente no vetor
+	 */
+	public int existe(String elemento) {
+		// Busca Sequencial
+		for (int i=0; i<this.tamanho; i++) {
+			if (this.elementos[i].equalsIgnoreCase(elemento)) {
+				return i;
+			}			
+		} 
+		return -1;
+	}
+	
 	// Verifica o tamanho real do vetor
 	public int tamanho() {
 		return this.tamanho;

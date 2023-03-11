@@ -1,8 +1,8 @@
-package com.raphael.estruturadedados.vetor.teste;
+package com.raphael.estruturadedados.vetor.application;
 
 import com.raphael.estruturadedados.vetor.Vetor;
 
-public class Teste {
+public class Program {
 
 	public static void main(String[] args) {
 
@@ -12,6 +12,6 @@ public class Teste {
 		vetor.adiciona("Elemento 2");
 		vetor.adiciona("Elemento 3");
 		
-		System.out.println(vetor.busca(0));
+		System.out.println(vetor.existe("elemento 1"));
 	}
 }
