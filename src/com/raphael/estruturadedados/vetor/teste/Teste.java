@@ -6,9 +6,15 @@ public class Teste {
 
 	public static void main(String[] args) {
 		
-		Vetor vetor = new Vetor(5);
+		Vetor vetor = new Vetor(2);
+
+		try {
+			vetor.adiciona("2");
+			vetor.adiciona("2");
+			vetor.adiciona("2");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		
-		vetor.adiciona("Elemento 1");
-		vetor.adiciona("Elemento 2");
 	}
 }
