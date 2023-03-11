@@ -8,13 +8,10 @@ public class Teste {
 		
 		Vetor vetor = new Vetor(2);
 
-		try {
 			vetor.adiciona("2");
 			vetor.adiciona("2");
 			vetor.adiciona("2");
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+
 		
 	}
 }

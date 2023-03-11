@@ -12,14 +12,14 @@ public class Vetor {
 	}
 	
 	// Adiciona um elemento no final do vetor
-	public void adiciona(String elemento) throws Exception {
+	public Boolean adiciona(String elemento) {
 		if (this.tamanho < this.elementos.length) {
 			 this.elementos[this.tamanho] = elemento;
 			 this.tamanho++;	
+			 return true;
 		} else {
-			throw new Exception("O vetor já está cheio, não é possivel adicionar mais elementos!");
+			return false;	
 		}
-		
 	}
 	
 	
