@@ -52,6 +52,18 @@ public class Vetor {
 		}
 	}
 
+	// Remove elementos do vetor pela posicao
+	public void remove(int posicao) {
+		if (!(posicao >= 0 && posicao<tamanho)) {
+			throw new IllegalArgumentException("Posição inválida!");
+		}
+		for (int i=posicao; i<this.tamanho-1; i++) {
+			elementos[i] = elementos[i+1];
+		}
+		this.tamanho--;
+		
+	}
+	
 	// Busca elemento no vetor (pela posição)
 	public String busca(int posicao) {
 		if (!(posicao >= 0 && posicao < tamanho)) {
@@ -79,7 +91,7 @@ public class Vetor {
 	// Verifica o tamanho real do vetor
 	public int tamanho() {
 		return this.tamanho;
-	}
+	}	
 
 	// Imprime todos os elementos do vetor
 	@Override
