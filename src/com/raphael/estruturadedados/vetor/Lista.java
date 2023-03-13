@@ -132,6 +132,25 @@ public class Lista<T> {
 	
 	}
 	
+	// Esvaziar a lista, apagar todos os elementos
+	public void limpar() {
+		/*
+		 * Alternativa 1:
+		 * this.elementos = new Object[(T[]) this.elementos.lenght];
+		 * 
+		 * Alternativa 2:
+		 * this.tamanho = 0;
+		 * 
+		 * Alternativa 3:
+		 */
+		
+		for (int i=0; i<this.tamanho; i++) {
+			this.elementos[i] = null;
+		}
+		this.tamanho = 0;
+	}
+	
+	
 	// Verifica o tamanho real do vetor
 	public int tamanho() {
 		return this.tamanho;
