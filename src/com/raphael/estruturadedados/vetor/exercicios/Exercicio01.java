@@ -4,7 +4,6 @@ import com.raphael.estruturadedados.vetor.Lista;
 
 public class Exercicio01 {
 
-	
 	public static void main(String[] args) {
 
 		Lista<String> lista = new Lista<>(5);

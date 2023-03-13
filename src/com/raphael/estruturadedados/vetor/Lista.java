@@ -94,6 +94,17 @@ public class Lista<T> {
 		return -1;
 	}
 	
+	// Metodo similar ao lastIndexOf() - Grava a ultima posição que o elemento foi encontrado na lista.
+	public int ultimoIndice(T elemento) {
+		// Buscando de tras pra frente (para tornar o processo mais rapido)
+		for (int i=this.tamanho-1; i>=0; i--) {
+			if (this.elementos[i].equals(elemento)) {
+				return i;
+			}
+		}
+		return -1;
+	}
+	
 	
 	// metodo contem
 	public boolean contem(T elemento) {
