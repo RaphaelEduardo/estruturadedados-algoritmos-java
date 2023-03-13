@@ -68,7 +68,14 @@ public class Lista<T> {
 			elementos[i] = elementos[i+1];
 		}
 		this.tamanho--;
-		
+	}
+	
+	// Remove elementos do vetor tendo o elemento como parametro
+	public void removeElemento(T elemento) {
+		int posicao = this.existe(elemento);
+		if (posicao > -1) {
+			this.remove(posicao);
+		}
 	}
 	
 	// Busca elemento no vetor (pela posição)
