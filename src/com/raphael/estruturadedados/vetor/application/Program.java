@@ -11,7 +11,16 @@ public class Program {
 		vetor.adiciona("Elemento 1");
 		vetor.adiciona("Elemento 2");
 		vetor.adiciona("Elemento 3");
+		vetor.adiciona("Elemento 5");
+		vetor.adiciona("Elemento 6");
+		vetor.adiciona("Elemento 7");
 		
-		System.out.println(vetor.existe("elemento 1"));
+		vetor.adicionaPosicao(0, "Elemento 0");
+		System.out.println(vetor);
+		
+		vetor.adicionaPosicao(4, "Elemento 4");
+		System.out.println(vetor);
+		
+		
 	}
 }

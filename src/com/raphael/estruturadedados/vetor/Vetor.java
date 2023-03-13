@@ -1,6 +1,6 @@
 package com.raphael.estruturadedados.vetor;
 
-import java.util.Arrays;
+
 
 public class Vetor {
 
@@ -9,7 +9,7 @@ public class Vetor {
 	// tamanho real do vetor
 	private int tamanho;
 
-	// Cria um vetor com a capacidade (tamanho) de elementos informada
+	// Cria um vetor com a capacidade de elementos informada
 	public Vetor(int capacidade) {
 		this.elementos = new String[capacidade];
 		this.tamanho = 0;
@@ -25,6 +25,21 @@ public class Vetor {
 			return false;
 		}
 	}
+	
+	// Adicionar elemento em qualquer posição
+	public boolean adicionaPosicao(int posicao, String elemento) {
+		if (!(posicao >= 0 && posicao<tamanho)) {
+			throw new IllegalArgumentException("Posição inválida!");
+		}
+		for (int i=this.tamanho-1; i>=posicao; i--) {
+			elementos[i+1] = elementos [i];
+		}
+		elementos[posicao] = elemento;
+		tamanho++;
+		return true;
+	}
+	
+	
 
 	// Busca elemento no vetor (pela posição)
 	public String busca(int posicao) {
@@ -71,5 +86,6 @@ public class Vetor {
 		s.append("]");
 		return s.toString();
 	}
-
+	
+	
 }
