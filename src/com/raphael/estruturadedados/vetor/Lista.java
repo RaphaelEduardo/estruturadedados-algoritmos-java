@@ -1,20 +1,29 @@
 package com.raphael.estruturadedados.vetor;
 
-public class Vetor {
+// Utilizando Generics
+public class Lista<T> {
 
-	private String[] elementos;
-
-	// tamanho real do vetor
+	
+	private T[] elementos;
 	private int tamanho;
 
 	// Cria um vetor com a capacidade de elementos informada
-	public Vetor(int capacidade) {
-		this.elementos = new String[capacidade];
+	public Lista(int capacidade) {
+		this.elementos =  (T[]) new Object[capacidade]; // Solução do livro "Java Efetivo"
 		this.tamanho = 0;
 	}
 
+	/*
+	 * #Solução alternativa
+	 *public Lista(int capacidade, Class<T> tipoClasse) {
+	 *  this.elementos = (T[]) Array.newInstance(tipoClasse, capacidade);
+	 *	this.tamanho = 0;
+	 *}
+	 */
+	
+	
 	// Adiciona um elemento no final do vetor
-	public boolean adiciona(String elemento) {
+	public boolean adiciona(T elemento) {
 		this.aumentaCapacidade();
 		if (this.tamanho < this.elementos.length) {
 			this.elementos[this.tamanho] = elemento;
@@ -26,7 +35,7 @@ public class Vetor {
 	}
 	
 	// Adicionar elemento em qualquer posição
-	public boolean adicionaPorPosicao(int posicao, String elemento) {
+	public boolean adicionaPorPosicao(int posicao, T elemento) {
 		if (!(posicao >= 0 && posicao<tamanho)) {
 			throw new IllegalArgumentException("Posição inválida!");
 		}
@@ -42,7 +51,7 @@ public class Vetor {
 	// Adicionar capacidade ao vetor (sempre que precisar de mais espaço)
 	private void aumentaCapacidade() {
 		if (this.tamanho == this.elementos.length) {
-			String[] elementosNovos = new String[this.elementos.length * 2];
+			T[] elementosNovos = (T[]) new Object[this.elementos.length * 2];
 			for (int i=0; i<this.elementos.length; i++) {
 				elementosNovos[i] = elementos[i];
 			}
@@ -63,12 +72,11 @@ public class Vetor {
 	}
 	
 	// Busca elemento no vetor (pela posição)
-	public String busca(int posicao) {
+	public Object busca(int posicao) {
 		if (!(posicao >= 0 && posicao < tamanho)) {
 			throw new IllegalArgumentException("Posição invalida");
-		} else {
-			return this.elementos[posicao];
 		}
+		return this.elementos[posicao];
 	}	
 
 	/*
@@ -76,10 +84,10 @@ public class Vetor {
 	 *  Se existir, retorna a posição que foi encontrado
 	 *  Se não, retorna -1 que é uma posição inexistente no vetor
 	 */
-	public int existe(String elemento) {
+	public int existe(T elemento) {
 		// Busca Sequencial
 		for (int i=0; i<this.tamanho; i++) {
-			if (this.elementos[i].equalsIgnoreCase(elemento)) {
+			if (this.elementos[i].equals(elemento)) {
 				return i;
 			}			
 		} 

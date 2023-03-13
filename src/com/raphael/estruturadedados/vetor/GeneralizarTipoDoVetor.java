@@ -1,7 +1,5 @@
 package com.raphael.estruturadedados.vetor;
 
-
-
 public class GeneralizarTipoDoVetor {
 
 	// "Classe pai" de todos o tipos
