@@ -94,6 +94,22 @@ public class Lista<T> {
 		return -1;
 	}
 	
+	
+	// metodo contem
+	public boolean contem(T elemento) {
+	
+		/*
+		 * int posicao = existe(elemento);
+		 * if (posicao > -1) {
+		 *     return true;
+		 * }
+		 * return false;
+		 */
+		
+		return existe(elemento) > -1; // >=0
+	
+	}
+	
 	// Verifica o tamanho real do vetor
 	public int tamanho() {
 		return this.tamanho;
