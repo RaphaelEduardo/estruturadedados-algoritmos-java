@@ -92,13 +92,17 @@ public class Lista<T> {
 	 *  Se não, retorna -1 que é uma posição inexistente no vetor
 	 */
 	public int existe(T elemento) {
-		// Busca Sequencial
 		for (int i=0; i<this.tamanho; i++) {
 			if (this.elementos[i].equals(elemento)) {
 				return i;
 			}			
 		} 
 		return -1;
+	}
+	
+	// Retorna um elemento a partir da posição (similar ao get)
+	public T obtem(int posicao) {
+		return (T) this.busca(posicao);
 	}
 	
 	// Metodo similar ao lastIndexOf() - Grava a ultima posição que o elemento foi encontrado na lista.
