@@ -17,6 +17,4 @@ public class Pilha<T> extends EstruturaEstatica<T> {
 		super.adiciona(elemento);
 	}
 	
-	
-	
 }

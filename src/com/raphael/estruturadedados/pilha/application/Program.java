@@ -9,9 +9,13 @@ public class Program {
 		
 		Pilha<Integer> pilha = new Pilha<>();
 		
+		
+		System.out.println(pilha.estaVazia());
 		for (int i=1; i<=10; i++) {
 			pilha.empilha(i);
 		}
+		
+		System.out.println(pilha.estaVazia());
 		
 		System.out.println(pilha);
 		System.out.println(pilha.tamanho());

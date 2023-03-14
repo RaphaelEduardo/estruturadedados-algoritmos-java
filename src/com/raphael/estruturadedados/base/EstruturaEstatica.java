@@ -15,6 +15,7 @@ public class EstruturaEstatica<T> {
 		this(10);
 	}
 
+	// Verifica se a pilha esta vazia
 	public boolean estaVazia() {
 		return this.tamanho == 0;
 	}
