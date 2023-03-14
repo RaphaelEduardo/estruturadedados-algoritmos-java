@@ -9,16 +9,20 @@ public class Program {
 		
 		Pilha<Integer> pilha = new Pilha<>();
 		
+		System.out.println("A pilha está vazia? " + pilha.estaVazia());
 		
-		System.out.println(pilha.estaVazia());
 		for (int i=1; i<=10; i++) {
 			pilha.empilha(i);
 		}
 		
-		System.out.println(pilha.estaVazia());
+		System.out.println("A pilha está vazia? " + pilha.estaVazia());
 		
-		System.out.println(pilha);
-		System.out.println(pilha.tamanho());
+		System.out.println("Topo da pilha: " + pilha.topo());
+	
+		System.out.println("Tamanho da pilha: " + pilha.tamanho());
+		
+		System.out.println("Pilha: " + pilha);
+		
 	
 	
 	
