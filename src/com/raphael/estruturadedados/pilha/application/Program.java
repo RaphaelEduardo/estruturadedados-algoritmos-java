@@ -23,7 +23,11 @@ public class Program {
 		
 		System.out.println("Pilha: " + pilha);
 		
-	
+		pilha.desempilha();
+		System.out.println("Desempilhando...");
+		
+		System.out.println("Pilha: " + pilha);
+		
 	
 	
 	
