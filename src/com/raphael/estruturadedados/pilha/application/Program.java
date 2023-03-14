@@ -1,5 +1,7 @@
 package com.raphael.estruturadedados.pilha.application;
 
+import java.util.Stack;
+
 import com.raphael.estruturadedados.pilha.Pilha;
 
 public class Program {
@@ -9,27 +11,28 @@ public class Program {
 		
 		Pilha<Integer> pilha = new Pilha<>();
 		
-		System.out.println("A pilha está vazia? " + pilha.estaVazia());
+		Stack<Integer> stack = new Stack<>();
 		
-		for (int i=1; i<=10; i++) {
-			pilha.empilha(i);
-		}
+		//estaVazio()
+		System.out.println(stack.isEmpty());
 		
-		System.out.println("A pilha está vazia? " + pilha.estaVazia());
+		//empilha()
+		stack.push(1);
+		stack.push(2);
+		stack.push(3);
 		
-		System.out.println("Topo da pilha: " + pilha.topo());
-	
-		System.out.println("Tamanho da pilha: " + pilha.tamanho());
+		//tamanho da pilha
+		System.out.println(stack.size());
 		
-		System.out.println("Pilha: " + pilha);
+		// toString
+		System.out.println(stack);
 		
-		pilha.desempilha();
-		System.out.println("Desempilhando...");
+		// Espiar topo da pilha
+		System.out.println(stack.peek());
 		
-		System.out.println("Pilha: " + pilha);
+		//desempilha()
+		System.out.println(stack.pop());
 		
-	
-	
-	
+		System.out.println(stack);
 	}
 }
