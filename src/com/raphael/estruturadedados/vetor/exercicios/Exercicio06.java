@@ -198,14 +198,14 @@ public class Exercicio06 {
 		}
 	}
 	
-	private static String lerInformacao(String msg, Scanner sc) {
+	protected static String lerInformacao(String msg, Scanner sc) {
 		System.out.println(msg);
 		String entrada = sc.nextLine();
 		
 		return entrada;
 	}
 	
-	private static int lerInformacaoInt(String msg, Scanner sc) {
+	protected static int lerInformacaoInt(String msg, Scanner sc) {
 		boolean entradaValida = false;
 		int num = 0;
 		
@@ -213,8 +213,8 @@ public class Exercicio06 {
 			try {
 				System.out.println(msg);
 				String entrada = sc.nextLine();
-				
-				num = Integer.parseInt(entrada);	
+				num = Integer.parseInt(entrada);
+				entradaValida = true;
 			} catch (Exception e) {
 				System.out.println("Entrada inválida, digite novamente...");
 			}
@@ -222,7 +222,7 @@ public class Exercicio06 {
 		return num;
 	}
 	
-	private static int obterOpcaoMenu(Scanner sc) {
+	protected static int obterOpcaoMenu(Scanner sc) {
 
 		boolean entradaValida = false;
 		int opcao = 0;
@@ -260,7 +260,7 @@ public class Exercicio06 {
 		return opcao;
 	}
 
-	private static void criarContatosDinamicamente(int quantidade, Lista<Contato> lista) {
+	protected static void criarContatosDinamicamente(int quantidade, Lista<Contato> lista) {
 		Contato c;
 		for (int i = 1; i <= quantidade; i++) {
 			c = new Contato();
