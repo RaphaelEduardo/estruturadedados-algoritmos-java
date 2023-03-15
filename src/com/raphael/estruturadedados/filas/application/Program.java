@@ -13,12 +13,14 @@ public class Program {
 		fila.enfileirar(100);
 		fila.enfileirar(1000);
 		
-		System.out.println(fila.estaVazia());
-		System.out.println(fila.tamanho());
-		System.out.println(fila.espiar());
+		System.out.println("A fila está vazia? " + fila.estaVazia());
+		System.out.println("Tamanho da fila: " + fila.tamanho() + "\n");
 		
+		System.out.println("Primeiro elemento da fila: " + fila.espiar());
+		System.out.println("Fila: " + fila + "\n");
 		
-		System.out.println(fila.toString());
+		System.out.println("Elemento desenfileirado: " + fila.desenfileirar(2));
+		System.out.println("Fila: " + fila);
 		
 	}
 	

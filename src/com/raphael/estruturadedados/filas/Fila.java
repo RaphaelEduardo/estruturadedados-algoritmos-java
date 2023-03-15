@@ -12,7 +12,7 @@ public class Fila<T> extends EstruturaEstatica<T> {
 		super(capacidade);
 	}
 
-	// Adiciona um elemento no final da fila
+	// Adiciona um elemento no final da fila (QUEUE)
 	public void enfileirar(T elemento) {
 		/*
 		 * 1ª SOLUÇÃO: this.elementos[this.tamanho] = elemento; this.tamanho++;
@@ -23,18 +23,21 @@ public class Fila<T> extends EstruturaEstatica<T> {
 		this.adiciona(elemento);
 	}
 
-	// Espiar o primeiro elemento da fila
+	// Verifica qual o primeiro elemento da fila
 	public T espiar() {
+		return this.elementos[0];
+	}
+
+	// Remove o primeiro elemento da fila (DEQUEUE)
+	public T desenfileirar(T elemento) {
+		final int posicao = 0;
 		if (this.estaVazia()) {
 			return null;
 		} else {
-			return this.elementos[0];
+			T elementoRemovido = this.elementos[posicao];
+			this.remove(posicao);
+			return elementoRemovido;
 		}
-	}
-
-	// Remove um elemento do inicio da fila
-	public T desenfileirar(T elemento) {
-		return elemento;
 	}
 
 }
