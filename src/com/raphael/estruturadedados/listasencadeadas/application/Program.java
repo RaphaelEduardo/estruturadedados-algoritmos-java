@@ -11,6 +11,7 @@ public class Program {
 		lista.adicionar(7);
 		
 		System.out.println(lista);
+		System.out.println("Tamanho da lista: " + lista.getTamanho());
 		
 		
 	}

@@ -2,10 +2,10 @@ package com.raphael.estruturadedados.listasencadeadas.entities;
 
 public class No<T> {
 
-	private T elemento; // Onde vai ser guardado o valor.
+	private T elemento; 
 	private No<T> proximo; 
 
-	// Inicia o nó apontando pra null
+	
 	public No(T elemento) {
 		this.elemento = elemento;
 		this.proximo = null;
