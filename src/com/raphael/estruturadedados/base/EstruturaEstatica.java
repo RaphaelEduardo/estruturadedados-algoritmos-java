@@ -34,10 +34,12 @@ public class EstruturaEstatica<T> {
 
 	// Adicionar elemento em qualquer posição
 	protected boolean adicionaPorPosicao(int posicao, T elemento) {
-		if (!(posicao >= 0 && posicao < tamanho)) {
+		if (!(posicao >= 0 || posicao < tamanho)) {
 			throw new IllegalArgumentException("Posição inválida!");
 		}
 		this.aumentaCapacidade();
+		
+		//Move todos os elementos
 		for (int i = this.tamanho - 1; i >= posicao; i--) {
 			elementos[i + 1] = elementos[i];
 		}

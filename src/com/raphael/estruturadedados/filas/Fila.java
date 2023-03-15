@@ -29,7 +29,7 @@ public class Fila<T> extends EstruturaEstatica<T> {
 	}
 
 	// Remove o primeiro elemento da fila (DEQUEUE)
-	public T desenfileirar(T elemento) {
+	public T desenfileirar() {
 		final int posicao = 0;
 		if (this.estaVazia()) {
 			return null;
