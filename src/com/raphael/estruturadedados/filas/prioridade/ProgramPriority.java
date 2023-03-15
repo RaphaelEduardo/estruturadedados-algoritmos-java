@@ -1,26 +1,28 @@
 package com.raphael.estruturadedados.filas.prioridade;
 
-import com.raphael.estruturadedados.filas.FilaComPrioridade;
+import java.util.PriorityQueue;
 
 public class ProgramPriority {
 
 	public static void main(String[] args) {
 
-
-		FilaComPrioridade<Paciente> fila = new FilaComPrioridade<>();
-
-		fila.enfileirar(new Paciente("A", 2));
-		fila.enfileirar(new Paciente("C", 1));
-		fila.enfileirar(new Paciente("B", 3));
-
-		// A fila vai ser 1 2 3 (Por conta da prioridade.
-		System.out.println(fila); 
-
-		System.out.println(fila.desenfileirar());
+		PriorityQueue<Integer> filaComPrioridade = new PriorityQueue<>();
 		
-		System.out.println(fila);
+		// Enfileira
+		filaComPrioridade.add(5);
+		filaComPrioridade.add(7);
+		filaComPrioridade.add(2);
+		filaComPrioridade.add(10);
 		
 		
+		// toString
+		System.out.println(filaComPrioridade);
+
+		// Desenfileira
+		filaComPrioridade.remove();
+
+		// toString
+		System.out.println(filaComPrioridade);
 	}
 
 }
