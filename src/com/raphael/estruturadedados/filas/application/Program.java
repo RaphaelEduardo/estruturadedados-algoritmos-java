@@ -1,29 +1,26 @@
 package com.raphael.estruturadedados.filas.application;
 
-import com.raphael.estruturadedados.filas.Fila;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class Program {
 
 	public static void main(String[] args) {
-		
-		Fila<Integer> fila = new Fila<>();
-		
-		fila.enfileirar(1);
-		fila.enfileirar(10);
-		fila.enfileirar(100);
-		fila.enfileirar(1000);
-		
-		System.out.println("A fila está vazia? " + fila.estaVazia());
-		System.out.println("Tamanho da fila: " + fila.tamanho() + "\n");
-		
-		System.out.println("Primeiro elemento da fila: " + fila.espiar());
-		System.out.println("Fila: " + fila + "\n");
-		
-		System.out.println("Elemento desenfileirado: " + fila.desenfileirar(2));
-		System.out.println("Fila: " + fila);
-		
+
+		// Interface Queue instanciada pela classe LinkedList
+		Queue<Integer> fila = new LinkedList<>();
+
+		fila.add(10); // enqueue
+		fila.add(20); // enqueue
+
+		System.out.println(fila); // toString
+
+		System.out.println(fila.peek()); // espiar
+
+		System.out.println(fila.remove()); // dequeue
+
+		System.out.println(fila); // toString
+
 	}
-	
-	
-	
+
 }

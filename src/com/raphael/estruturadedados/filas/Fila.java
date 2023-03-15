@@ -12,7 +12,7 @@ public class Fila<T> extends EstruturaEstatica<T> {
 		super(capacidade);
 	}
 
-	// Adiciona um elemento no final da fila (QUEUE)
+	// Adiciona um elemento no final da fila (ENQUEUE)
 	public void enfileirar(T elemento) {
 		/*
 		 * 1ª SOLUÇÃO: this.elementos[this.tamanho] = elemento; this.tamanho++;
