@@ -15,6 +15,11 @@ public class Program {
 		System.out.println("Lista: " + lista.toString());
 		System.out.println("Tamanho da lista: " + lista.getTamanho());
 		
+		lista.limpar();
+		
+		System.out.println("Lista: " + lista.toString());
+		System.out.println("Tamanho da lista: " + lista.getTamanho());
+		
 		
 	}
 }

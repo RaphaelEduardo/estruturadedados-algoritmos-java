@@ -23,6 +23,29 @@ public class ListaEncadeada<T> {
 		return this.tamanho;
 	}
 
+	public void limpar() {
+		/*
+		 *  ALTERNATIVA 01: MAIS SIMPLES
+		 *  this.inicio = null;
+		 *  this.ultimo = null;
+		 *  this.tamanho = 0;
+		 *  
+		 *  ALTERNATIVA 02: OTIMIZADA (BOA PRÁTICA)
+		 *  (Declaração/Inicialização; Condição; Incremento/Decremento)
+		 */
+		for (No<T> atual = this.inicio; atual != null;) {
+			No<T> proximo = atual.getProximo();
+			atual.setElemento(null);
+			atual.setProximo(null);
+			atual = proximo;
+		}
+		
+		this.inicio = null;
+		this.ultimo = null;
+		this.tamanho = 0;
+		
+	}
+	
 	@Override
 	public String toString() {
 		// [inicio, atual, final -> null]
